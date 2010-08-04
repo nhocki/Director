@@ -6,15 +6,6 @@ require 'lib/authorization'
 require 'lib/models'
 require 'lib/helpers'
 
-
-# get '/' do
-#   erb "#{request.referer} ===== #{request.url} ====== #{request.path_info} === #{request.fullpath} <a href='/show'> SHOW </a>"
-# end
-# 
-# get '/show' do
-#   erb "#{request.referer} ===== #{request.url} ====== #{request.path_info} === #{request.fullpath} <a href='/'> HOME </a>"
-# end
-
 get '/backstage/?' do
   require_admin
   @page_title = "Backstage Area"
@@ -22,7 +13,7 @@ get '/backstage/?' do
   erb :index
 end
 
-get '/backstage/logout' do
+get '/backstage/logout/?' do
   require_admin
   @page_title = "Comeback soon!"
   logout
@@ -36,8 +27,6 @@ get '/backstage/:id/?' do
   erb :show
 end
 
-
-
 get '/*/?' do
   @movement = Movement.create(
     :referer => check_referer,
@@ -45,6 +34,6 @@ get '/*/?' do
     :path_info => request.fullpath,
     :ours => check_trusted_domain
   )
-  erb "You'll be redirected to #{options.redirect_url}"
-  # redirect options.redirect_url.to_s, 301
+  #erb "You would be redirected to #{options.redirect_url}"
+  redirect "#{options.redirect_url.to_s}/#{request.fullpath}", 301
 end
