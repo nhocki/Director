@@ -1,0 +1,20 @@
+<h1>Backstage</h1>
+
+<p>Here you'll find a list of the broken links we've filtered. Hopefully most of them are from trusted domains</p>
+
+<div class="movements">
+  <table width="95%" align="center">
+    <tr>
+      <th>Incident ID</th>
+      <th>Resource</th>
+      <th>Referer information</th>
+    </tr>  
+<% @movements.each do |m| %>
+  <tr>
+    <td><%= m.id %> <span class="small">(<%= link_from_movement(m) %>)</span></td>
+    <td><%= m.path_info %></td>
+    <td><%= from_trusted_site?(m.ours) %></td>
+  </tr>
+<% end %>
+</table>
+</div>

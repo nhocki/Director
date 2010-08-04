@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Director :: <%= @page_title || "Home page" %> ::</title>
+	<link rel="stylesheet" href="/stylesheets/main.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+  
+  <div id="content">
+    <div id="header">
+      <h1 id="logo">
+        <a href="/backstage">Director .: Manage your migrations easily :.</a>
+      </h1>
+    </div>
+  
+  
+    <%= yield %>
+    
+    <div class="github">
+      This small thing is open source
+    </div>
+  </div>
+  
+  <div id="footer">
+    <div id="general-information">
+      <p>
+        Created by <a href="http://github.com/nhocki">Nicolás Hock Isaza</a> - 
+        <span class="email"><a href="mailto:nhocki@gmail.com"> nhocki@gmail.com </a></span></p>
+      <p>Running on Sinatra <%= Sinatra::VERSION %>.</p>
+    </div>
+  </div>
+</body>
+</html>

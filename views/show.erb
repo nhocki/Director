@@ -1,0 +1,32 @@
+<h2><%= @page_title %></h2>
+
+<p>Some (hopefully) helpful information</p>
+
+<div class="movement">
+  <p>On <strong><%= pretty_date(@movement) %></strong>, someone tried to access a resource that used to be here.</p>
+  
+  <p>They tried to access what used to be in <strong><%= @movement.path_info %></strong></p>
+  
+  <% unless @movement.referer.empty? %>
+    <p>The connection came from <a href='<%= @movement.referer %>'> <%= @movement.referer %> </a></p>    
+  <% else %>
+    <p>Someone typed the URL in the address bar.</p>
+  <% end %>
+  
+  <% if @movement.ours %>
+    <h3>The worst thing is that the incident could have been prevented.</h3>
+    <p>You have the referer site as a trusted site. You should update the information there to fix this broken link!</p>
+  <% else %>
+    <p class='softred'>Unfortunately, there's nothing you can easily do to update that broken link :-(</p>
+  <% end %>
+  
+  
+  <div class="report">
+    <h4>Report</h4>
+    <p><strong>Incident id:</strong><%= @movement.id %></p>
+    <p><strong>Incident date:</strong> <%= pretty_date(@movement) %></p>
+  </div>
+  
+  <a href="/backstage">Go to backstage</a>
+  
+</div>
