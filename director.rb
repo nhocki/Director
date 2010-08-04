@@ -35,5 +35,5 @@ get '/*/?' do
     :ours => check_trusted_domain
   )
   #erb "You would be redirected to #{options.redirect_url}"
-  redirect "#{options.redirect_url.to_s}/#{request.fullpath}", 301
+  redirect "#{options.redirect_url.to_s}/#{@movement.full_path_info}", 301
 end

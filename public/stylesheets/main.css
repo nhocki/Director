@@ -1,6 +1,6 @@
 *{outline: none;} /*4B7399*/
 body {font-family: Helvetica, Verdana, Arial; background: #42C142;}
-#content {width: 960px; margin: 0 auto; background: #FFF; margin-top: 50px; padding: 30px; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; position: relative;}
+#content {width: 960px; margin: 0 auto; background: #FFF; margin-top: 50px; padding: 30px; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; position: relative;  -moz-box-shadow: 4px 3px 5px rgba(0,0,0,0.5); -webkit-box-shadow:4px 3px 5px rgba(0,0,0,0.5);}
 
 #header {padding: 30px 0px;}
 #logo {background: url(/images/logo.png) no-repeat top left; width: 478px; height: 194px; margin: 0 auto;}
