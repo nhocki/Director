@@ -1,4 +1,50 @@
-README COMMING SOON
+h1. Director
+
+*Director* is a simple "Sinatra":http://www.sinatrarb.com application that makes it incredibly useful to _track broken links_.
+
+h1. Small History
+
+I work at the R+D in Computer in Education at "My University":http://www.eafit.edu.co, and we have some applications hosted in some specific servers. We didn't have a Top Level Domain for each application so we used one top level domains for our server and then just create SubURIs for the applications. But, one day, we had to migrate those applications to other servers and there's the problem Director solves.
+
+We had some of the applications in production, and some sites were already linking to our application. We not only didn't want to lose that traffic, but we also wanted to *know who was pointing at us*, so we could _(when possible)_ update the broken links.
+
+I created *Director* for that. It will redirect the user (Using the 301 header response) to the new link and it will store the HTTP Referer for you. You can add a list of _"Trusted Hosts"_ (which are the ones where you can actually update the broken link) and tell you that you can fix the _problem_
+
+
+h1. How it works
+
+Imagine you had your application at _myfirsthost.com_ and now it's at _mysecondhost.com_. You just have to deploy *Director* at _myfirsthost.com_ and chage the configuration file (which can be found at _config/config.yml_)
+
+The config file should look like this
+
+@
+    production:
+      db_filename: production.db
+      redirect_url: "mysecondhost.com"
+      admin_username: admin
+      admin_password: mysupersecretpassword
+      domains:
+        - trusted_domain1.com
+        - trusted_domain2.com
+        - trusted_domain3.com
+@
+
+To check out the reports, you can go to
+
+    myfirsthost.com/backstage
+
+
+h1. Requirements
+
+*Director* has some dependencies. You'll need
+
+ * Sinatra
+ * Yaml Gem
+ * DataMapper Core (dm-core)
+ * DataMapper Timestamps (dm-timestamps)
+ * DataMapper Migrations (dm-migrations)
+ * DataMapper Aggregates (dm-aggregates)
+ 
 
 -- Important TODOs
 
