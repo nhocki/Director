@@ -16,6 +16,7 @@ h1. How it works
 Imagine you had your application at _myfirsthost.com_ and now it's at _mysecondhost.com_. You just have to deploy *Director* at _myfirsthost.com_ and chage the configuration file (which can be found at _config/config.yml_)
 
 The config file should look like this
+
 <pre>
     production:
       db_filename: production.db
@@ -27,9 +28,10 @@ The config file should look like this
         - trusted_domain2.com
         - trusted_domain3.com
 </pre>
+
 To check out the reports, you can go to
 
-    myfirsthost.com/backstage
+    <pre>myfirsthost.com/backstage</pre>
 
 
 h1. Requirements
@@ -44,9 +46,9 @@ h1. Requirements
  * DataMapper Aggregates (dm-aggregates)
  
 
--- Important TODOs
+h1. TODOs
 
  * Documentation
- * Capistrano
+ * Capistrano & Passenger info
 
 Nicolás Hock Isaza.
