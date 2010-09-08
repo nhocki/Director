@@ -13,3 +13,4 @@ db/schema.rb
 .DS_Store
 .svn
 config/database.yml
+config/deploy.rb
