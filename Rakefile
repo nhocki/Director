@@ -15,6 +15,6 @@ task :install_dependencies do
   
   dependencies.each do |gem_name, version|
     puts "Installing #{gem_name} version #{version}"
-    system "gem install #{gem_name} --version #{version}"
+    system "gem install #{gem_name} --version #{version} --no-ri --no-rdoc"
   end
 end
