@@ -1,0 +1,14 @@
+desc "Install gems that this app depends on. Maybe you'll need to use sudo"
+
+task :install_dependencies do
+  dependencies = {
+    "sinatra"             => "1.0",
+    "dm-core"             => "1.0.0",
+    "dm-timestamps"       => "1.0.0",
+    "dm-migrations"       => "1.0.0",
+    "dm-aggregates"       => "1.0.0",
+    "do_sqlite3"          => "0.10.2",
+    "dm-sqlite-adapter"   => "1.0.0",
+    "ya2yaml"             => "0.29.2"
+  }
+end

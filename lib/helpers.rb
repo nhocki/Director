@@ -21,6 +21,7 @@ helpers do
     obj.created_at.strftime("%B %e, %Y")
   end
   
+  # :nodoc:
   def from_trusted_site? (ours)
     if ours
       return "<span class='green'> trusted site </span>"
@@ -29,10 +30,12 @@ helpers do
     end
   end
   
+  # Creates a simple link to the movement report
   def link_from_movement(movement)
     "<a href='/backstage/#{movement.id}'>watch report</a>"
   end
   
+  # Checks if the request has a referer and returns it
   def check_referer
     if request.referer != "/"
       return request.referer
