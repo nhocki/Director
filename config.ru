@@ -1,8 +1,22 @@
 require 'rubygems'
 require 'sinatra'
-
 require 'director'
+
+path = File.dirname(__FILE__)
+
+print "Sinatra app is on #{path}"
+
+Sinatra::Application.default_options.merge!(
+  :run => false,
+  :env => :production,
+  :public => path + '/public',
+  :views => path  + '/views'
+)
+
+log = File.new("#{path}/director.log", "a")
+STDOUT.reopen(log)
+STDERR.reopen(log)
 
 set :environment, :production
 
-run Sinatra.application
+run Sinatra::Application
