@@ -1,6 +1,6 @@
 development:
   db_filename: development.db
-  redirect_url: "http://newton.eafit.edu.co"
+  redirect_url: "http://zinergia.com"
   admin_username: admin
   admin_password: my_super_secret_password
   domains:
@@ -10,10 +10,11 @@ development:
   
 production:
   db_filename: production.db
-  redirect_url: "http://www.eafit.edu.co"
+  redirect_url: "http://newton.eafit.edu.co"
   admin_username: admin
   admin_password: mysupersecretpassword
   domains:
+    - nhocki.com
     - colombiaaprende.edu.co
     - eafit.edu.co
     - localhost
