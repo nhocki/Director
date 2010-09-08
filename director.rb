@@ -1,10 +1,10 @@
 require 'rubygems'
 require 'yaml'
 require 'sinatra'
-require './initializers/load_config'
-require './lib/authorization'
-require './lib/models'
-require './lib/helpers'
+require 'initializers/load_config'
+require 'lib/authorization'
+require 'lib/models'
+require 'lib/helpers'
 
 # Goes to the admin panel
 get '/backstage/?' do
