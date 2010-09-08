@@ -1,6 +1,6 @@
 h1. Director
 
-*Director* is a simple "Sinatra":http://www.sinatrarb.com application that makes it incredibly useful to _track broken links_.
+*Director* is a simple "Sinatra":http://www.sinatrarb.com application that makes it *incredibly easy* to _track *broken links*_.
 
 h1. Small History
 
@@ -31,7 +31,9 @@ The config file should look like this
 
 To check out the reports, you can go to
 
-    <pre>myfirsthost.com/backstage</pre>
+    <pre>   myfirsthost.com/backstage</pre>
+
+where _myfirsthost.com_ is where your application was hosted.
 
 
 h1. Requirements
@@ -45,10 +47,25 @@ h1. Requirements
  * DataMapper Migrations (dm-migrations)
  * DataMapper Aggregates (dm-aggregates)
  
+You can use bundler's magic and just run
+
+    <pre>   bundle install</pre>
+    
+I've also created a _simple_ Rakefile that will install all the dependencies. So you'll just run
+
+    <pre>   rake install_dependencies</pre>
+    
+Either way everything you need will be installed.
+
+h2. Default settings
+
+*Director* uses Sqlite3 by default, so inside the dependencies I've added the _do_sqlite3_ and the _dm-sqlite-adapter_ gems.
+
+If you want to change the database adapter, you just need to change the *lib/models.rb* file and install the adapter you'll use.
 
 h1. TODOs
 
  * Documentation
  * Capistrano & Passenger info
 
-Nicolás Hock Isaza.
+Nicolás Hock Isaza. nhocki@gmail.com

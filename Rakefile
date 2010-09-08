@@ -11,4 +11,10 @@ task :install_dependencies do
     "dm-sqlite-adapter"   => "1.0.0",
     "ya2yaml"             => "0.29.2"
   }
+  
+  
+  dependencies.each do |gem_name, version|
+    puts "Installing #{gem_name} version #{version}"
+    system "gem install #{gem_name} --version #{version}"
+  end
 end

@@ -10,7 +10,7 @@ development:
   
 production:
   db_filename: production.db
-  redirect_url: "http://newton.eafit.edu.co"
+  redirect_url: "http://2amthoughts.com"
   admin_username: admin
   admin_password: mysupersecretpassword
   domains:
