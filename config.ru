@@ -12,7 +12,7 @@ print "Sinatra app is on #{path}"
 #   :views => path  + '/views'
 # )
 
-log = File.new("#{path}/logs/director.log", "a")
+log = File.new("#{path}/log/director.log", "a")
 STDOUT.reopen(log)
 STDERR.reopen(log)
 
