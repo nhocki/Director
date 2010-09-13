@@ -10,9 +10,9 @@ path = File.dirname(__FILE__)
 #   :env => :production
 # )
 # 
-# log = File.new("#{path}/director.log", "a")
-# STDOUT.reopen(log)
-# STDERR.reopen(log)
+log = File.new("#{path}/director.log", "a")
+STDOUT.reopen(log)
+STDERR.reopen(log)
 
 set :environment, :production
 set :root, path
