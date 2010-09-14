@@ -28,6 +28,7 @@ namespace :db do
     require 'dm-migrations'
     require 'dm-aggregates'
     require 'sinatra'
+    set :environment, :production
     configure :production do
       DataMapper.auto_upgrade!
     end
