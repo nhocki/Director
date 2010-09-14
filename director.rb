@@ -30,6 +30,9 @@ get '/backstage/:id/?' do
   erb :show
 end
 
+get '/favicon.ico' do
+  # ignore this?
+end
 
 # Gets everything and redirects it to where it should be
 get '/*/?' do

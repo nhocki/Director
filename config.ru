@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-# require 'director'
+require 'director'
 
 path = File.dirname(__FILE__)
 
