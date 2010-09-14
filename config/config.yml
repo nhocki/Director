@@ -3,6 +3,7 @@ development:
   redirect_url: "http://zinergia.com"
   admin_username: admin
   admin_password: my_super_secret_password
+  # sub_uri: /
   domains:
     - colombiaaprende.edu.co
     - eafit.edu.co
@@ -13,6 +14,7 @@ production:
   redirect_url: "http://2amthoughts.com"
   admin_username: admin
   admin_password: mysupersecretpassword
+  # sub_uri: /
   domains:
     - nhocki.com
     - colombiaaprende.edu.co

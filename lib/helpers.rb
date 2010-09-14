@@ -4,7 +4,7 @@ helpers do
   include Sinatra::Authorization
   
   def base_url
-    @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
+    @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}/#{options.suburi}"
   end
 
   # Function that checks if the HTTP referer comes from
