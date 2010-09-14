@@ -18,3 +18,12 @@ task :install_dependencies do
     system "gem install #{gem_name} --version #{version} --no-ri --no-rdoc"
   end
 end
+
+namespace :db do
+  desc "Migrate the database"
+  task :migrate do
+    configure :production do
+      DataMapper.auto_upgrade!
+    end
+  end
+end
