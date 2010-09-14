@@ -3,6 +3,10 @@ require 'sinatra'
 helpers do
   include Sinatra::Authorization
   
+  def base_url
+    @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
+  end
+
   # Function that checks if the HTTP referer comes from
   # one of the domains listed in the config file.
   def check_trusted_domain
