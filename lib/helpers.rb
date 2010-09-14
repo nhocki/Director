@@ -15,6 +15,10 @@ helpers do
     end
   end
   
+  def image_tag(path)
+    "<img src=#{base_url}/images/#{path} />"
+  end
+  
   # Creates an escaped regex from a string.
   def create_escaped_regexp(exp)
     Regexp.new(Regexp.escape(exp))

@@ -1,10 +1,12 @@
 *{outline: none;} /*4B7399*/
 body {font-family: Helvetica, Verdana, Arial; background: #42C142;}
+a img{border: none;}
+
 #content {width: 960px; margin: 0 auto; background: #FFF; margin-top: 50px; padding: 30px; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; position: relative;  -moz-box-shadow: 4px 3px 5px rgba(0,0,0,0.5); -webkit-box-shadow:4px 3px 5px rgba(0,0,0,0.5);}
 
 #header {padding: 30px 0px;}
-#logo {background: url(/images/logo.png) no-repeat top left; width: 478px; height: 194px; margin: 0 auto;}
-#logo a{display: block; width: 478px; height: 194px; text-indent: -9999em;}
+#logo {width: 478px; height: 194px; margin: 0 auto;}
+#logo a{display: block; width: 478px; height: 194px; border: none;}
 
 h1,h2 {margin: 0;}
 h1, h2{font-size: 5em; padding:0px 0px 15px; font-family: "Trebuchet MS", Helvetica; text-shadow: 3px 5px rgba(200,200,200,0.8)}
