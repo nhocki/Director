@@ -22,6 +22,12 @@ end
 namespace :db do
   desc "Migrate the database"
   task :migrate do
+    require 'rubygems'
+    require 'dm-core'
+    require 'dm-timestamps'
+    require 'dm-migrations'
+    require 'dm-aggregates'
+    require 'sinatra'
     configure :production do
       DataMapper.auto_upgrade!
     end
