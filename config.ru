@@ -1,16 +1,8 @@
-require 'rubygems'
-require 'sinatra'
-require 'director'
+require './director'
 
 path = File.dirname(__FILE__)
 
-print "Sinatra app is on #{path}"
-# Sinatra::Application.default_options.merge!(
-#   :run => false,
-#   :env => :production,
-#   :public => path + '/public',
-#   :views => path  + '/views'
-# )
+puts "Created by Nicolas Hock -- nhocki@gmail.com"
 
 log = File.new("#{path}/log/director.log", "a")
 STDOUT.reopen(log)

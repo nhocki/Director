@@ -15,6 +15,7 @@ helpers do
     end
   end
   
+  # Simple image helper
   def image_tag(path)
     "<img src=#{base_url}/images/#{path} />"
   end

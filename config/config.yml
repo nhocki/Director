@@ -1,6 +1,6 @@
 development:
   db_filename: development.db
-  redirect_url: "http://zinergia.com"
+  redirect_url: "http://zinergia.net"
   admin_username: admin
   admin_password: my_super_secret_password
   # sub_uri: /

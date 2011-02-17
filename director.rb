@@ -1,10 +1,13 @@
+$LOAD_PATH.unshift File.expand_path('../initializers', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+
 require 'rubygems'
 require 'yaml'
 require 'sinatra'
-require 'initializers/load_config'
-require 'lib/authorization'
-require 'lib/models'
-require 'lib/helpers'
+require 'load_config'
+require 'authorization'
+require 'models'
+require 'helpers'
 
 # Goes to the admin panel
 get '/backstage/?' do
@@ -45,5 +48,3 @@ get '/*/?' do
   puts "You will be redirected to #{options.redirect_url.to_s}/#{@movement.path_info} with a 301 Header"
   redirect "#{options.redirect_url.to_s}/#{@movement.path_info}", 301
 end
-
-puts "Created by Nicolas Hock -- nhocki@gmail.com"
