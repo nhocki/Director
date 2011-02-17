@@ -45,6 +45,7 @@ get '/*/?' do
     :path_info => request.fullpath,
     :ours => check_trusted_domain
   )
-  puts "You will be redirected to #{options.redirect_url.to_s}/#{@movement.path_info} with a 301 Header"
-  redirect "#{options.redirect_url.to_s}/#{@movement.path_info}", 301
+  redirect_path = options.redirect_url.to_s + @movement.path_info.to_s
+  puts "You will be redirected to #{redirect_path} with a 301 Header"
+  redirect redirect_path, 301
 end
